@@ -1,0 +1,21 @@
+{
+  "name": "@local/dsh-swarm",
+  "version": "0.3.0",
+  "license": "MIT",
+  "homepage": "https://github.com/wuyouchao/dsh-swarm#readme",
+  "bugs": { "url": "https://github.com/wuyouchao/dsh-swarm/issues" },
+  "packageManager": "pnpm@10.15.1",
+  "repository": { "type": "git", "url": "git+https://github.com/wuyouchao/dsh-swarm.git" },
+  "private": true,
+  "type": "module",
+  "description": "/swarm-mode 协作：协调者拆分任务，命名 worker 并行执行，成员在公共留言板协作，verifier 复核",
+  "engines": { "dsh": ">=0.2.2-rc.3 <0.2.3-0" },
+  "exports": { ".": "./index.js", "./client": "./client.js", "./locale/*.json": "./locale/*.json", "./icon": "./icon.svg" },
+  "files": ["index.js", "remote.js", "lib/**/*.js", "client.js", "cordis.patch.yml", "locale/*.json", "icon.svg", "README.md", "CONTRACT.md"],
+  "scripts": { "build": "node build.js", "test": "node --test tests/*.test.js" },
+  "dependencies": { "zod": "^4.0.0" },
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": { "platform": "web", "immediately": true, "inject": ["@deepseek-ai/dsh-client-ui-sidebar-right", "@deepseek-ai/dsh-client-ui-conversation", "@deepseek-ai/dsh-api-remotes"] }
+  }
+}

@@ -1,0 +1,5 @@
+# Uses the Host's agentTeams and subagents services.
+- insert:
+    - id: local-swarm
+      name: '@local/dsh-swarm'
+      config: {}
