@@ -4,19 +4,19 @@ DSH Swarm 是一个 DeepSeek Harness 社区插件。在现有对话里创建命�
 
 ## 安装并试用
 
-在 DSH Desktop 的「插件 → 添加插件」中粘贴下面的安装包地址，安装并启用 Swarm。已验证的环境是 Windows 上的 DSH `0.2.2-rc.5`。
+在 DSH Desktop 的「插件 → 添加插件」中粘贴仓库地址，安装并启用 Swarm。
 
 ```text
-https://github.com/wuyouchao/dsh-swarm/releases/download/v0.3.0/local-dsh-swarm-0.3.0.tgz
+https://github.com/wuyouchao/dsh-swarm.git
 ```
 
-使用 DSH CLI 的 Web 配置时，在终端执行同一版本的安装命令。其他配置请将 `web` 替换为实际的 profile 名称。
+命令行安装到 Web 配置时，运行下面的命令。其他配置请将 `web` 替换为实际的 profile 名称。
 
 ```sh
-dsh plugin --profile web add https://github.com/wuyouchao/dsh-swarm/releases/download/v0.3.0/local-dsh-swarm-0.3.0.tgz
+dsh plugin --profile web add https://github.com/wuyouchao/dsh-swarm.git
 ```
 
-也可以在 [Releases](https://github.com/wuyouchao/dsh-swarm/releases) 下载 `.tgz`，将本地绝对路径填入「添加插件」。
+此地址从 `main` 分支安装，后续版本沿用同一地址。需要固定版本时，可从 [Releases](https://github.com/wuyouchao/dsh-swarm/releases) 下载对应的 `.tgz` 安装包。已验证环境为 Windows 和 DSH `0.2.2-rc.5`。
 
 安装后，在普通对话发送以下命令。执行成功后，右侧面板会打开。在「成员」查看队友，在「留言板」查看任务书和报告。
 
